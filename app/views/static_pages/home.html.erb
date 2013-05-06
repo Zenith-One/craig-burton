@@ -1,10 +1,29 @@
-<% provide(:title, "Home") %>
-<!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit">
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
-      </div>
+<!-- Intro -->
+      <div class="hero-unit clearfix">
+        <div class="row">
+            <%
+              age = (Date.today - "11/8/1984".to_date).to_i / 365
+            %>
+            <div class="laptop">
+              <div class="laptop-inner">
+                <p class="prompt-container"><span class="prompt"></span> <span class="command stats"></span></p>
+                <p>Name: Craig Burton; Age: <%= age %>; Gender: Male; Married: Yes; Children: 1; 
+                <p class="prompt-container"><span class="prompt"></span> <span class="command languages"></span></p>
+                <p>Format: Language (subsets/frameworks). '+' and '-' denote greater/lesser familiarity.</p>
+                <p>Web: ASP+, CSS+ (LESS-, SASS+), HTML+, javascript+ (backbone.js-, jQuery+, MooTools, node.js-), PHP+ (CakePHP-, CodeIgniter), Python-, Ruby on Rails</p>
+                <p>Non-Web: Java+, Scala, LUA <span class="more pull-right"><%= link_to("More &gt;".html_safe, about_path) %></span></p>
+              </div><!-- .laptop-inner -->
+            </div><!-- .laptop -->
+            <div class="span5 welcome">
+              <h1>Hello, world!</h1>
+              <p>My name is Craig Burton, and I am a developer. I'm currently a web developer, but I got my start in QBasic and never looked back.</p>
+              <p>Although I've only been programming professionally since 2012, it's been a hobby of mine since I was 10. My main driving force is an insatiable desire to learn new things, be they new languages or frameworks or new ways to tackle problems in languages I already know. I'm on what I like to call a continual improvement plan (as Daft Punk would say, "Harder, better, faster, stronger").</p>
+              <p class="buttons">
+                <a href="#" class="btn btn-primary btn-large pull-right">Portfolio</a>
+              </p>
+            </div>
+        </div><!-- .row -->
+      </div><!-- .hero-unit -->
 
       <!-- Example row of columns -->
       <div class="row">
