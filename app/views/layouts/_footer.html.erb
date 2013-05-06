@@ -1,0 +1,14 @@
+<hr>
+
+<%
+  copyright_year = "2013"
+  if Time.now.year > 2013 then
+    copyright_year << "-" + Time.now.year.to_s
+  end
+%>
+
+      <footer>
+        <p>&copy; Craig Burton, <%= copyright_year %></p>
+      </footer>
+
+    </div> <!-- /container -->

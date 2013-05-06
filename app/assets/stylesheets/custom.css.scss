@@ -1,0 +1,113 @@
+@mixin transition($type, $duration){
+  -webkit-transition: $type $duration;
+     -moz-transition: $type $duration;
+       -o-transition: $type $duration;
+          transition: $type $duration;
+}
+
+// Color variables
+$white: #FFF;
+$red: #F00;
+$black: #000;
+
+// Transition variables
+$long: 0.5s;
+
+
+
+
+.navbar {
+  .brand {
+    color: $white;
+
+
+    .code {
+      color: $white;
+      @include transition(all, $long);
+    }
+
+    &:hover {
+      color: $white;
+
+      .code {
+        color: $red;
+      }
+    }
+
+  }
+
+  .nav{
+    &>li>a {
+      @include transition(all, $long);
+
+      &:hover {
+        color: $red;
+      }
+    }
+
+    &>li.active a, 
+    &>li.active a:hover {
+      cursor: default;
+      //color: $red;
+      text-decoration: underline;
+    }
+
+    li.dropdown .dropdown-toggle {
+      .caret {
+        @include transition(all, $long);
+      }
+
+      &:hover .caret {
+        border-top-color: $red;
+      }
+    }
+
+  }
+
+
+
+  .dropdown-menu {
+    border: 1px solid $black;
+    color: $black;
+
+    -webkit-box-shadow: none;
+       -moz-box-shadow: none;
+         -o-box-shadow: none;
+            box-shadow: none;
+
+    li> a {
+      color: $black;
+    }
+
+    li > a:hover, 
+    li > a:focus {
+      background-color: $black;
+      background-image: none;
+      color: $white;
+    }
+
+    li.divider {
+      background-color: $black;
+    }
+    li.nav-header {
+      color: $black;
+    }
+  }
+}
+
+@media (max-width: 979px){
+  .navbar {
+    .dropdown-menu {
+
+      li > a, 
+      a {
+        color: $white;
+        @include transition(all, $long);
+
+        &:hover {
+          color: $red;
+        }
+      } 
+    } 
+  }
+}

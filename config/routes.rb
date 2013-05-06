@@ -2,6 +2,11 @@ Mysite::Application.routes.draw do
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
+  root to: 'static_pages#home'
+
+  match "/about", to: 'static_pages#about'
+  match "/contact", to: 'static_pages#contact'
+
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
