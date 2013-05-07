@@ -10,17 +10,21 @@ module ApplicationHelper
     end
   end
 
-  def nav_link(link_text, link_path)
+  def nav_link(link_text, link_path, icon)
     #figure out if this links to the current page
     class_name = current_page?(link_path) ? 'active' : ''
+    full_text = link_text
+    unless icon.empty?
+      full_text = "<i class=\"#{icon}\"></i>" + full_text
+    end
 
     content_tag(:li, :class => class_name) do
       if class_name == '' then
-        link_to link_text, link_path
+       link_to(full_text.html_safe, link_path)
       else
         # just link to the top instead. No need for a fresh
         # set of HTTP requests. =)
-        link_to link_text, '#'
+        link_to(full_text.html_safe, '#')
       end
     end
   end

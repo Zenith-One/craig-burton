@@ -23,5 +23,8 @@ body { padding-top: 80px; }
 // And finally bootswatch style itself
 @import "bootswatch/cosmo/bootswatch";
 
+// Also font-awesome
+@import "font-awesome";
+
 // custom stuff here
 @import "custom/master"

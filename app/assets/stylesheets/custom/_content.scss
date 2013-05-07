@@ -14,6 +14,15 @@
     margin-top: 25px;
     padding: 20px;
     width: 476px;
+
+    @media (max-width: 979px){
+      float: none;
+      margin: 0 auto;
+    }
+    @media (max-width: 579px){
+      background: transparent;
+      height: auto;
+    }
   }
 
   .laptop-inner {
@@ -58,11 +67,29 @@
         content: "languages";
       }
     }
+    @media (max-width: 579px){
+      background-color: #333;
+      border-radius: 10px;
+      box-shadow: inset -1px -1px 2px 1px #999, inset 1px 1px 4px 1px #000;
+      height: auto;
+      padding: 5px 20px 10px;
+      width: 75%;
+
+      p {
+        width: 100%;
+      }
+    }
   }
 
   .welcome {
     @media (max-width: 1199px){
-      padding-left: 20px;
+      width: 370px;
+      float: left;
+    }
+    @media (max-width: 979px){
+      float: none;
+      width: 80%;
+      margin: 0 auto;
     }
   }
 

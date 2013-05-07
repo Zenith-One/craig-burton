@@ -9,9 +9,9 @@
           <a class="brand" href="/"><span class="code">C</span>raig Burt<span class="code">o</span>n, <span class="code">D</span>evelop<span class="code">e</span>r</a>
           <div class="nav-collapse collapse">
             <ul class="nav pull-right">
-              <%= nav_link 'Home', root_path %>
-              <%= nav_link 'About', about_path %>
-              <li><a href="#contact">Contact</a></li>
+              <%= nav_link 'Home', root_path, "icon-home" %>
+              <%= nav_link 'About', about_path, "icon-lightbulb" %>
+              <li><a href="#contact"><i class="icon-envelope"></i>Contact</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
                 <ul class="dropdown-menu">
@@ -24,6 +24,13 @@
                   <li><a href="#">One more separated link</a></li>
                 </ul>
               </li>
+              <li>
+                <a href="https://www.facebook.com/the.real.craig.b" target="_blank" title="Facebook"><i class="icon-facebook"></i></a>
+              </li>
+              <li>
+                <a href="https://twitter.com/the_zenith_" target="_blank" title="Twitter"><i class="icon-twitter"></i></a>
+              </li>
+              
             </ul>
           </div><!--/.nav-collapse -->
         </div>

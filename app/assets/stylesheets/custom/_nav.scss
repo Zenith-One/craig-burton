@@ -19,9 +19,10 @@
   }
 
   .nav{
+    padding-bottom: 15px;
     &>li>a {
       @include transition(all, $long);
-
+      padding-bottom: 0;
       &:hover {
         color: $red;
       }
@@ -31,7 +32,7 @@
     &>li.active a:hover {
       cursor: default;
       //color: $red;
-      text-decoration: underline;
+      border-bottom: 1px solid $white;
     }
 
     li.dropdown .dropdown-toggle {
@@ -90,6 +91,10 @@
           color: $red;
         }
       } 
+
+      li.nav-header{
+        color: $white;
+      }
     } 
   }
 }
